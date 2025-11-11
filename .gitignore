@@ -1,0 +1,13 @@
+# --- General ---
+.DS_Store
+__pycache__/
+*.pyc
+.env
+
+# --- Node / Frontend ---
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Ignore virtual environment in the backend folder
+/backend/venv/
