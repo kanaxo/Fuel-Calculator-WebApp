@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+
 function App() {
 	const [file, setFile] = useState(null);
 
@@ -10,7 +12,7 @@ function App() {
 		const formData = new FormData();
 		formData.append("file", file);
 
-		const response = await fetch("http://localhost:8000/process-csv", {
+		const response = await fetch(`${API_URL}/process-csv`, {
 			method: "POST",
 			body: formData,
 		});
